@@ -1,11 +1,11 @@
 //星の数
 int num = 200;
 //空間の広さ
-float scaleField = 2;
+float scaleField = 1;
 //処理速度
-float disTime = 0.05;
+float disTime = 0.01;
 //万有引力定数
-float grav = 5.0;
+float grav = 15.0;
 float sizStar = 800.;
 //粘性係数
 float conC = 200.;
@@ -154,7 +154,7 @@ void draw()
     if (star[i].bomb){
       star[i].counter = star[i].counter + 1.  ;
     };
-    if(star[i].counter>30*30){
+    if(star[i].counter>5){
         star[i].AddForce(0.1*star[i].Mass*star[i].GetForAbs()*random(-1., 1.),0.1*star[i].Mass*star[i].GetForAbs()*random(-1., 1.));
         star[i].counter = 0.;
         star[i].bomb = false;
